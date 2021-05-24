@@ -1,0 +1,20 @@
+<p-table [value]="sgcmData">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>scaumot</th>
+      <th>cod_garantia</th>
+      <th>garantia</th>
+      <th>cod_causa</th>
+      <th>causa</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-sgcmData>
+    <tr>
+      <td>{{ sgcmData.scaumot }}</td>
+      <td>{{ sgcmData.cod_garantia }}</td>
+      <td>{{ sgcmData.garantia }}</td>
+      <td>{{ sgcmData.cod_causa }}</td>
+      <td>{{ sgcmData.causa }}</td>
+    </tr>
+  </ng-template>
+</p-table>
