@@ -1,20 +1,28 @@
-<p-table [value]="sgcmData">
-  <ng-template pTemplate="header">
+<p-table [columns]="columnas" [value]="sgcmData">
+  <ng-template pTemplate="header" let-columns>
     <tr>
-      <th>scaumot</th>
+      <!--       <th>scaumot</th>
       <th>cod_garantia</th>
       <th>garantia</th>
       <th>cod_causa</th>
-      <th>causa</th>
+      <th>causa</th> -->
+
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-sgcmData>
+  <ng-template pTemplate="body" let-sgcmData let-columns="columns">
     <tr>
-      <td>{{ sgcmData.scaumot }}</td>
+      <!--       <td>{{ sgcmData.scaumot }}</td>
       <td>{{ sgcmData.cod_garantia }}</td>
       <td>{{ sgcmData.garantia }}</td>
       <td>{{ sgcmData.cod_causa }}</td>
-      <td>{{ sgcmData.causa }}</td>
+      <td>{{ sgcmData.causa }}</td> -->
+
+      <td *ngFor="let col of columns">
+        {{ sgcmData[col.field] }}
+      </td>
     </tr>
   </ng-template>
 </p-table>

@@ -12,6 +12,7 @@ import { SingarcausamotivoService } from '../../services/singarcausamotivo.servi
 })
 export class TablaComponent implements OnInit {
   sgcmData: singarcausamotivo[] = [];
+  columnas: { field: string; header: string }[] = [];
 
   constructor(private sgcmService: SingarcausamotivoService) {}
 
@@ -21,5 +22,13 @@ export class TablaComponent implements OnInit {
       .subscribe((data: singarcausamotivosResponse) => {
         this.sgcmData = data.data;
       });
+
+    this.columnas = [
+      { field: 'scaumot', header: 'scaumot' },
+      { field: 'cod_garantia', header: 'cod_garantia' },
+      { field: 'garantia', header: 'garantia' },
+      { field: 'cod_causa', header: 'cod_causa' },
+      { field: 'causa', header: 'causa' },
+    ];
   }
 }
