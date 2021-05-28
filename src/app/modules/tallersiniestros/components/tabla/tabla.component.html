@@ -1,28 +1,74 @@
-<p-table [columns]="columnas" [value]="sgcmData" [paginator]="true" [rows]="20">
+<div>
+  <ol>
+    <li>
+      TODO: Falla al ordenar por multiples columnas que son numericas, por
+      ejemplo ordenar primero por "Causa" y despues por "Garantia" pues lo
+      implementa como 2 cadenas y no como numeros <BR /> SOLUCIONADO en el json
+      de origen los numeros deben ser Numeros sin ", pues aunque en type sea un
+      Number, como es javascript lo que se ejecuta lo trata como cadena al venir
+      con comillas (ej. "130").
+    </li>
+  </ol>
+</div>
+<p-table
+  styleClass="p-datatable-sm p-datatable-striped"
+  [columns]="columnas"
+  [value]="sgcmData"
+  [paginator]="true"
+  [rows]="10"
+  sortMode="multiple"
+>
+  <ng-template pTemplate="caption">
+    <div class="p-d-flex p-ai-center p-jc-between">
+      Parametrizacion de causas y motivos
+      <p-button icon="pi pi-refresh"></p-button>
+    </div>
+  </ng-template>
   <ng-template pTemplate="header" let-columns>
     <tr>
-      <!--       <th>scaumot</th>
-      <th>cod_garantia</th>
-      <th>garantia</th>
-      <th>cod_causa</th>
-      <th>causa</th> -->
-
-      <th *ngFor="let col of columns">
-        {{ col.header }}
+      <th colspan="1"></th>
+      <th colspan="2">Garantía</th>
+      <th colspan="2">Causa</th>
+      <th colspan="2">Motivo</th>
+    </tr>
+    <tr>
+      <th pSortableColumn="scaumot">
+        scaumot <p-sortIcon field="scaumot"></p-sortIcon>
+      </th>
+      <th pSortableColumn="cod_garantia">
+        Código <p-sortIcon field="cod_garantia"></p-sortIcon>
+      </th>
+      <th pSortableColumn="garantia">
+        Descripción <p-sortIcon field="garantia"></p-sortIcon>
+      </th>
+      <th pSortableColumn="cod_causa">
+        Código <p-sortIcon field="cod_causa"></p-sortIcon>
+      </th>
+      <th pSortableColumn="causa">
+        Descripción <p-sortIcon field="causa"></p-sortIcon>
+      </th>
+      <th pSortableColumn="cod_motivo">
+        Código <p-sortIcon field="cod_motivo"></p-sortIcon>
+      </th>
+      <th pSortableColumn="motivo">
+        Descripción <p-sortIcon field="motivo"></p-sortIcon>
       </th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-sgcmData let-columns="columns">
+  <ng-template pTemplate="body" let-sgcmData>
     <tr>
-      <!--       <td>{{ sgcmData.scaumot }}</td>
+      <td>{{ sgcmData.scaumot }}</td>
       <td>{{ sgcmData.cod_garantia }}</td>
       <td>{{ sgcmData.garantia }}</td>
       <td>{{ sgcmData.cod_causa }}</td>
-      <td>{{ sgcmData.causa }}</td> -->
-
-      <td *ngFor="let col of columns">
-        {{ sgcmData[col.field] }}
-      </td>
+      <td>{{ sgcmData.causa }}</td>
+      <td>{{ sgcmData.cod_motivo }}</td>
+      <td>{{ sgcmData.motivo }}</td>
     </tr>
+  </ng-template>
+  <ng-template pTemplate="summary">
+    <div class="p-d-flex p-ai-center p-jc-between">
+      Total {{ sgcmData ? sgcmData.length : 0 }} parametrizaciones.
+    </div>
   </ng-template>
 </p-table>

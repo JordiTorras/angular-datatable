@@ -24,11 +24,13 @@ export class TablaComponent implements OnInit {
       });
 
     this.columnas = [
-      { field: 'scaumot', header: 'scaumot' },
-      { field: 'cod_garantia', header: 'cod_garantia' },
-      { field: 'garantia', header: 'garantia' },
-      { field: 'cod_causa', header: 'cod_causa' },
-      { field: 'causa', header: 'causa' },
+      { field: 'scaumot', header: 'SCauMot' },
+      { field: 'cod_garantia', header: 'Código Garantía' },
+      { field: 'garantia', header: 'Garantía' },
+      { field: 'cod_causa', header: 'Código causa' },
+      { field: 'causa', header: 'Causa' },
+      { field: 'cod_motivo', header: 'Código Motivo' },
+      { field: 'motivo', header: 'Motivo' },
     ];
   }
 }

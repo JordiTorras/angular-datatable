@@ -8,10 +8,17 @@ import { MtogarcausamotivoComponent } from './modules/tallersiniestros/pages/mto
 import { TablaComponent } from './modules/tallersiniestros/components/tabla/tabla.component';
 
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [AppComponent, MtogarcausamotivoComponent, TablaComponent],
-  imports: [BrowserModule, AppRoutingModule, TableModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TableModule,
+    ButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
