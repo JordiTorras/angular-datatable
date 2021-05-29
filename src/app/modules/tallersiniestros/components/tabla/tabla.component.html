@@ -3,25 +3,59 @@
     <li>
       TODO: Falla al ordenar por multiples columnas que son numericas, por
       ejemplo ordenar primero por "Causa" y despues por "Garantia" pues lo
-      implementa como 2 cadenas y no como numeros <BR /> SOLUCIONADO en el json
+      implementa como 2 cadenas y no como numeros <BR /> SOLUCIONAT: en el json
       de origen los numeros deben ser Numeros sin ", pues aunque en type sea un
       Number, como es javascript lo que se ejecuta lo trata como cadena al venir
       con comillas (ej. "130").
     </li>
+    <li>TODO: Afegir filtre per quan no te formules</li>
+    <li>TODO: Afegir filtre TODOS</li>
+    <li>
+      TODO: Arreglar el [Reinicar], la función table.clear() no inicialitza el
+      camp de filtre <br />
+      SOLUCIONAT: utilitzant el [(ngModel)] y utiitzant una variable que
+      reinicio al apretar [Reinicar]
+    </li>
   </ol>
 </div>
 <p-table
+  #dt1
   styleClass="p-datatable-sm p-datatable-striped"
-  [columns]="columnas"
   [value]="sgcmData"
+  dataKey="scaumot"
   [paginator]="true"
   [rows]="10"
+  [rowsPerPageOptions]="[10, 25, 50]"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="Visualitzant {first} a {last} d'un total de {totalRecords} entrades"
   sortMode="multiple"
+  [loading]="loading"
+  [globalFilterFields]="['garantia', 'causa', 'motivo']"
+  [scrollable]="true"
+  scrollHeight="400px"
+  scrollWidth="300px"
 >
+  >
   <ng-template pTemplate="caption">
     <div class="p-d-flex p-ai-center p-jc-between">
       Parametrizacion de causas y motivos
-      <p-button icon="pi pi-refresh"></p-button>
+      <span class="p-input-icon-left p-ml-auto">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          [placeholder]="busquedaGlobal ? busquedaGlobal : 'Terme a buscar'"
+          [value]="busquedaGlobal"
+          (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+        />
+      </span>
+      <button
+        pButton
+        label="Reiniciar"
+        class="p-button-outlined"
+        icon="pi pi-filter-slash"
+        (click)="clear(dt1)"
+      ></button>
     </div>
   </ng-template>
   <ng-template pTemplate="header" let-columns>
@@ -54,6 +88,24 @@
         Descripción <p-sortIcon field="motivo"></p-sortIcon>
       </th>
     </tr>
+    <tr>
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          scaumot
+          <p-columnFilter
+            type="text"
+            field="scaumot"
+            display="menu"
+          ></p-columnFilter>
+        </div>
+      </th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
   </ng-template>
   <ng-template pTemplate="body" let-sgcmData>
     <tr>
@@ -64,6 +116,11 @@
       <td>{{ sgcmData.causa }}</td>
       <td>{{ sgcmData.cod_motivo }}</td>
       <td>{{ sgcmData.motivo }}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="5">No s'han trobat registres</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="summary">
