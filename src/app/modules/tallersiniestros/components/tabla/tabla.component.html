@@ -26,6 +26,7 @@
         <input
           type="text"
           pInputText
+          [(ngModel)]="busquedaGlobal"
           [placeholder]="busquedaGlobal ? busquedaGlobal : 'Terme a buscar'"
           [value]="busquedaGlobal"
           (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
