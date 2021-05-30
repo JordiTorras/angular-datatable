@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   singarcausamotivo,
   singarcausamotivosResponse,
+  codigoDescripcion,
 } from '../../services/singarcausamotivo.type';
 import { SingarcausamotivoService } from '../../services/singarcausamotivo.service';
 import { MessageService } from 'primeng/api';
@@ -19,8 +20,10 @@ export class TablaComponent implements OnInit {
   loading: boolean = true;
   busquedaGlobal: string = '';
 
-  garantiasUnicas: string[] = [];
-  garantiasSeleccionadas: string[] = [];
+  garantiasUnicas: codigoDescripcion[] = [];
+  garantiasSeleccionadas: number[] = [];
+  causasUnicas: codigoDescripcion[] = [];
+  motivosUnicos: codigoDescripcion[] = [];
 
   constructor(private sgcmService: SingarcausamotivoService) {}
 
@@ -46,10 +49,36 @@ export class TablaComponent implements OnInit {
             Creamos las listas de valores unicos para garantias, causas y motivos
           */
 
-          if (!this.garantiasUnicas.includes(item.garantia)) {
-            this.garantiasUnicas.push(item.garantia);
-          }
+          // construim la llista de garanties
+          let aux: codigoDescripcion = {
+            cvalor: item.cod_garantia,
+            tvalor: item.garantia,
+          };
+          this.garantiasUnicas.push(aux);
+
+          this.causasUnicas.push({
+            cvalor: item.cod_causa,
+            tvalor: item.causa,
+          });
+
+          this.motivosUnicos.push({
+            cvalor: item.cod_motivo,
+            tvalor: item.motivo,
+          });
         });
+
+        // me quedo con valores unicos
+        this.garantiasUnicas = this.garantiasUnicas.filter(
+          (item, i, arr) => arr.findIndex((t) => t.cvalor === item.cvalor) === i
+        );
+
+        this.causasUnicas = this.causasUnicas.filter(
+          (item, i, arr) => arr.findIndex((t) => t.cvalor === item.cvalor) === i
+        );
+
+        this.motivosUnicos = this.motivosUnicos.filter(
+          (item, i, arr) => arr.findIndex((t) => t.cvalor === item.cvalor) === i
+        );
       });
 
     this.columnas = [

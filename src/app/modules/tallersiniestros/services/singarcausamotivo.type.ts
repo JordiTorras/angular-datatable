@@ -1,3 +1,5 @@
+import { CdkVirtualForOf } from '@angular/cdk/scrolling';
+
 export interface singarcausamotivosResponse {
   data: singarcausamotivo[];
 }
@@ -12,4 +14,9 @@ export interface singarcausamotivo {
   motivo: string;
   cod_formula: string;
   provision_inicial: string;
+}
+
+export interface codigoDescripcion {
+  cvalor: number;
+  tvalor: string;
 }

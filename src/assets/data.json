@@ -63,7 +63,7 @@
         {
             "scaumot": 640,
             "cod_garantia": 180,
-            "garantia": "REEMBOLSO GASTOS MEDICOS X ACCIDENTE",
+            "garantia": "Reembolso gastos medicos x accidente",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -75,7 +75,7 @@
         {
             "scaumot": 641,
             "cod_garantia": 180,
-            "garantia": "REEMBOLSO GASTOS MEDICOS X ACCIDENTE",
+            "garantia": "Reembolso gastos medicos x accidente",
             "cod_causa": 552,
             "causa": "Accidente",
             "cod_motivo": 3,
@@ -87,7 +87,7 @@
         {
             "scaumot": 642,
             "cod_garantia": 180,
-            "garantia": "REEMBOLSO GASTOS MEDICOS X ACCIDENTE",
+            "garantia": "Reembolso gastos medicos x accidente",
             "cod_causa": 552,
             "causa": "Accidente",
             "cod_motivo": 4,
@@ -99,7 +99,7 @@
         {
             "scaumot": 643,
             "cod_garantia": 180,
-            "garantia": "REEMBOLSO GASTOS MEDICOS X ACCIDENTE",
+            "garantia": "Reembolso gastos medicos x accidente",
             "cod_causa": 552,
             "causa": "Accidente",
             "cod_motivo": 7,
@@ -111,7 +111,7 @@
         {
             "scaumot": 644,
             "cod_garantia": 180,
-            "garantia": "REEMBOLSO GASTOS MEDICOS X ACCIDENTE",
+            "garantia": "Reembolso gastos medicos x accidente",
             "cod_causa": 552,
             "causa": "Accidente",
             "cod_motivo": 15,
@@ -123,7 +123,7 @@
         {
             "scaumot": 645,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -135,7 +135,7 @@
         {
             "scaumot": 605,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -147,7 +147,7 @@
         {
             "scaumot": 606,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -159,7 +159,7 @@
         {
             "scaumot": 607,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -171,7 +171,7 @@
         {
             "scaumot": 646,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -183,7 +183,7 @@
         {
             "scaumot": 592,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 0,
@@ -195,7 +195,7 @@
         {
             "scaumot": 647,
             "cod_garantia": 200,
-            "garantia": "MUERTE ACCIDENTAL",
+            "garantia": "Muerte accidental",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,
@@ -207,7 +207,7 @@
         {
             "scaumot": 648,
             "cod_garantia": 400,
-            "garantia": "INVALIDEZ POR ACCIDENTE",
+            "garantia": "Invalidez por accidente",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -219,7 +219,7 @@
         {
             "scaumot": 649,
             "cod_garantia": 400,
-            "garantia": "INVALIDEZ POR ACCIDENTE",
+            "garantia": "Invalidez por accidente",
             "cod_causa": 500,
             "causa": "Invalidez",
             "cod_motivo": 4,
@@ -231,7 +231,7 @@
         {
             "scaumot": 650,
             "cod_garantia": 400,
-            "garantia": "INVALIDEZ POR ACCIDENTE",
+            "garantia": "Invalidez por accidente",
             "cod_causa": 500,
             "causa": "Invalidez",
             "cod_motivo": 2,
@@ -243,7 +243,7 @@
         {
             "scaumot": 155,
             "cod_garantia": 400,
-            "garantia": "INVALIDEZ POR ACCIDENTE",
+            "garantia": "Invalidez por accidente",
             "cod_causa": 500,
             "causa": "Invalidez",
             "cod_motivo": 0,
@@ -255,7 +255,7 @@
         {
             "scaumot": 156,
             "cod_garantia": 400,
-            "garantia": "INVALIDEZ POR ACCIDENTE",
+            "garantia": "Invalidez por accidente",
             "cod_causa": 500,
             "causa": "Invalidez",
             "cod_motivo": 3,
@@ -267,7 +267,7 @@
         {
             "scaumot": 651,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -279,7 +279,7 @@
         {
             "scaumot": 158,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 1,
@@ -291,7 +291,7 @@
         {
             "scaumot": 652,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 4,
@@ -303,7 +303,7 @@
         {
             "scaumot": 159,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 2,
@@ -315,7 +315,7 @@
         {
             "scaumot": 157,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 0,
@@ -327,7 +327,7 @@
         {
             "scaumot": 160,
             "cod_garantia": 600,
-            "garantia": "ITP 2/3 ADELANTO DE CAPITAL                          ",
+            "garantia": "ITP 2/3 Adelanto de capital                          ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 3,
@@ -339,7 +339,7 @@
         {
             "scaumot": 653,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -351,7 +351,7 @@
         {
             "scaumot": 652,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 4,
@@ -363,7 +363,7 @@
         {
             "scaumot": 159,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 2,
@@ -375,7 +375,7 @@
         {
             "scaumot": 157,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 0,
@@ -387,7 +387,7 @@
         {
             "scaumot": 160,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 551,
             "causa": "Invalidez Total Permanente",
             "cod_motivo": 3,
@@ -399,7 +399,7 @@
         {
             "scaumot": 636,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 501,
             "causa": "Desmembramiento",
             "cod_motivo": 4,
@@ -411,7 +411,7 @@
         {
             "scaumot": 637,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 501,
             "causa": "Desmembramiento",
             "cod_motivo": 2,
@@ -423,7 +423,7 @@
         {
             "scaumot": 638,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 501,
             "causa": "Desmembramiento",
             "cod_motivo": 0,
@@ -435,7 +435,7 @@
         {
             "scaumot": 639,
             "cod_garantia": 1000,
-            "garantia": "ALT. B DESMEMBR. E ITP x ACC.                               ",
+            "garantia": "Alt. B Desmembr. e ITP x Acc..                               ",
             "cod_causa": 501,
             "causa": "Desmembramiento",
             "cod_motivo": 3,
@@ -447,7 +447,7 @@
         {
             "scaumot": 654,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -459,7 +459,7 @@
         {
             "scaumot": 655,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -471,7 +471,7 @@
         {
             "scaumot": 656,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -483,7 +483,7 @@
         {
             "scaumot": 657,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -495,7 +495,7 @@
         {
             "scaumot": 658,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -507,7 +507,7 @@
         {
             "scaumot": 659,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 9,
@@ -519,7 +519,7 @@
         {
             "scaumot": 660,
             "cod_garantia": 1006,
-            "garantia": "RENTA MENSUAL 120 MESES FALLECIMIENTO",
+            "garantia": "Renta mensual 120 meses fallecimiento",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,
@@ -531,7 +531,7 @@
         {
             "scaumot": 661,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -543,7 +543,7 @@
         {
             "scaumot": 605,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -555,7 +555,7 @@
         {
             "scaumot": 606,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -567,7 +567,7 @@
         {
             "scaumot": 607,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -579,7 +579,7 @@
         {
             "scaumot": 646,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -591,7 +591,7 @@
         {
             "scaumot": 592,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 0,
@@ -603,7 +603,7 @@
         {
             "scaumot": 647,
             "cod_garantia": 1200,
-            "garantia": "ALTERN  A, MUERTE ACCIDENTAL                               ",
+            "garantia": "Altern. A, Muerte accidental                               ",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,
@@ -615,7 +615,7 @@
         {
             "scaumot": 662,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -627,7 +627,7 @@
         {
             "scaumot": 655,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -639,7 +639,7 @@
         {
             "scaumot": 656,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -651,7 +651,7 @@
         {
             "scaumot": 657,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -663,7 +663,7 @@
         {
             "scaumot": 658,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -675,7 +675,7 @@
         {
             "scaumot": 663,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 0,
@@ -687,7 +687,7 @@
         {
             "scaumot": 660,
             "cod_garantia": 2600,
-            "garantia": "RENTA MENSUAL 120 MESES ACC.",
+            "garantia": "Renta mensual 120 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,
@@ -699,7 +699,7 @@
         {
             "scaumot": 664,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -711,7 +711,7 @@
         {
             "scaumot": 665,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -723,7 +723,7 @@
         {
             "scaumot": 666,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -735,7 +735,7 @@
         {
             "scaumot": 667,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -747,7 +747,7 @@
         {
             "scaumot": 668,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -759,7 +759,7 @@
         {
             "scaumot": 669,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 0,
@@ -771,7 +771,7 @@
         {
             "scaumot": 670,
             "cod_garantia": 3900,
-            "garantia": "RENTA MENSUAL 12 MESES ACC.",
+            "garantia": "Renta mensual 12 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,
@@ -783,7 +783,7 @@
         {
             "scaumot": 671,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 100,
             "causa": "Causa no contemplada en poliza",
             "cod_motivo": 0,
@@ -795,7 +795,7 @@
         {
             "scaumot": 672,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 2,
@@ -807,7 +807,7 @@
         {
             "scaumot": 673,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 3,
@@ -819,7 +819,7 @@
         {
             "scaumot": 674,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 4,
@@ -831,7 +831,7 @@
         {
             "scaumot": 675,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 5,
@@ -843,7 +843,7 @@
         {
             "scaumot": 676,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 0,
@@ -855,7 +855,7 @@
         {
             "scaumot": 677,
             "cod_garantia": 4200,
-            "garantia": "RENTA MENSUAL 60 MESES ACC.",
+            "garantia": "Renta mensual 60 meses acc.",
             "cod_causa": 502,
             "causa": "Fallecimiento ",
             "cod_motivo": 8,

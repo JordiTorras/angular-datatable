@@ -23,7 +23,7 @@
       chip
     </li>
     <li>
-      AVISO: Si se usa la opción [scrollable]="true", cuando se usan filtros
+      AVIS: Si se usa la opción [scrollable]="true", cuando se usan filtros
       desplegables entonces estos quedan por debajo de las filas de la tabla y
       no se ve el pop-up del filtro
     </li>
@@ -32,6 +32,15 @@
       saber que he filtrado por la garantia 1 y garantia 2, con [ngModel] no me
       ha funcionado
     </li>
-    <li>TODO: Multiseleccion con busqueda</li>
+    <li>
+      TODO: Multiseleccion con busqueda <br />
+      SOLUCIONAT: tenim que informar optionLabel="tvalor" i
+      optionValue="tvalor", pero quan es fa servir el p-multiselect fora de una
+      taula, aleshores podem fer servir optionLabel="tvalor"
+      optionValue="cvalor" per recuperar el codi seleccionat <br />
+      SOLUCIONAT: hem de indicar que filtem per la columna cod_garantia
+      p-columnFilter field="cod_garantia" ... i aleshores si podem fer servir
+      optionValue="cvalor"
+    </li>
   </ol>
 </div>
