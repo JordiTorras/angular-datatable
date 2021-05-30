@@ -20,7 +20,16 @@
 
   <ng-template pTemplate="caption">
     <div class="p-d-flex p-ai-center p-jc-between">
-      Parametrizacion de causas y motivos
+      <p-multiSelect
+        [options]="hidden_columnas"
+        [(ngModel)]="selectedColumns"
+        optionLabel="columna"
+        [style]="{ maxWidth: '40px' }"
+        [displaySelectedLabel]="false"
+        optionDisabled="inactive"
+      ></p-multiSelect>
+
+      <p>Parametrizacion de causas y motivos</p>
       <span class="p-input-icon-left p-ml-auto">
         <i class="pi pi-search"></i>
         <input
@@ -41,50 +50,56 @@
       ></button>
     </div>
   </ng-template>
+
   <ng-template pTemplate="header" let-columns>
     <tr>
-      <th colspan="1"></th>
-      <th colspan="2">Garantía</th>
-      <th colspan="2">Causa</th>
-      <th colspan="2">Motivo</th>
+      <th colspan="1" [hidden]="hidden_columnas[0].ocultar"></th>
+      <th colspan="2" [hidden]="hidden_columnas[1].ocultar">Garantía</th>
+      <th colspan="2" [hidden]="hidden_columnas[2].ocultar">Causa</th>
+      <th colspan="2" [hidden]="hidden_columnas[3].ocultar">Motivo</th>
+      <th colspan="2" [hidden]="hidden_columnas[4].ocultar">Formula</th>
     </tr>
+
     <tr>
-      <th pSortableColumn="scaumot">
+      <th pSortableColumn="scaumot" [hidden]="hidden_columnas[0].ocultar">
         scaumot
         <p-sortIcon field="scaumot"></p-sortIcon>
       </th>
-      <th pSortableColumn="cod_garantia">
+      <th pSortableColumn="cod_garantia" [hidden]="hidden_columnas[1].ocultar">
         Código <p-sortIcon field="cod_garantia"></p-sortIcon>
       </th>
-      <th pSortableColumn="garantia">
+      <th pSortableColumn="garantia" [hidden]="hidden_columnas[1].ocultar">
         Descripción
         <p-sortIcon field="garantia"></p-sortIcon>
       </th>
-      <th pSortableColumn="cod_causa">
+      <th pSortableColumn="cod_causa" [hidden]="hidden_columnas[2].ocultar">
         Código <p-sortIcon field="cod_causa"></p-sortIcon>
       </th>
-      <th pSortableColumn="causa">
+      <th pSortableColumn="causa" [hidden]="hidden_columnas[2].ocultar">
         Descripción <p-sortIcon field="causa"></p-sortIcon>
       </th>
-      <th pSortableColumn="cod_motivo">
+      <th pSortableColumn="cod_motivo" [hidden]="hidden_columnas[3].ocultar">
         Código <p-sortIcon field="cod_motivo"></p-sortIcon>
       </th>
-      <th pSortableColumn="motivo">
+      <th pSortableColumn="motivo" [hidden]="hidden_columnas[3].ocultar">
         Descripción <p-sortIcon field="motivo"></p-sortIcon>
       </th>
+      <th [hidden]="hidden_columnas[4].ocultar">Código</th>
+      <th [hidden]="hidden_columnas[4].ocultar">Descripción</th>
     </tr>
+
     <tr>
-      <th>
+      <th [hidden]="hidden_columnas[0].ocultar">
         <p-columnFilter
           type="text"
           field="scaumot"
           matchMode="contains"
         ></p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[1].ocultar">
         <p-columnFilter type="numeric" field="cod_garantia"></p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[1].ocultar">
         <p-columnFilter field="cod_garantia" matchMode="in" [showMenu]="false">
           <ng-template pTemplate="filter" let-value let-filter="filterCallback">
             <p-multiSelect
@@ -102,7 +117,7 @@
           </ng-template>
         </p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[2].ocultar">
         <p-columnFilter field="cod_causa" matchMode="in" [showMenu]="false">
           <ng-template pTemplate="filter" let-value let-filter="filterCallback">
             <p-multiSelect
@@ -120,7 +135,7 @@
           </ng-template>
         </p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[2].ocultar">
         <p-columnFilter field="motivo" matchMode="in" [showMenu]="false">
           <ng-template pTemplate="filter" let-value let-filter="filterCallback">
             <p-multiSelect
@@ -138,14 +153,14 @@
           </ng-template>
         </p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[3].ocultar">
         <p-columnFilter
           type="numeric"
           field="cod_motivo"
           display="menu"
         ></p-columnFilter>
       </th>
-      <th>
+      <th [hidden]="hidden_columnas[4].ocultar">
         <p-columnFilter field="motivo" matchMode="in" [showMenu]="false">
           <ng-template pTemplate="filter" let-value let-filter="filterCallback">
             <p-multiSelect
@@ -163,17 +178,22 @@
           </ng-template>
         </p-columnFilter>
       </th>
+      <th [hidden]="hidden_columnas[4].ocultar"></th>
+      <th [hidden]="hidden_columnas[4].ocultar"></th>
     </tr>
   </ng-template>
+
   <ng-template pTemplate="body" let-sgcmData>
     <tr>
-      <td>{{ sgcmData.scaumot }}</td>
-      <td>{{ sgcmData.cod_garantia }}</td>
-      <td>{{ sgcmData.garantia }}</td>
-      <td>{{ sgcmData.cod_causa }}</td>
-      <td>{{ sgcmData.causa }}</td>
-      <td>{{ sgcmData.cod_motivo }}</td>
-      <td>{{ sgcmData.motivo }}</td>
+      <td [hidden]="hidden_columnas[0].ocultar">{{ sgcmData.scaumot }}</td>
+      <td [hidden]="hidden_columnas[1].ocultar">{{ sgcmData.cod_garantia }}</td>
+      <td [hidden]="hidden_columnas[1].ocultar">{{ sgcmData.garantia }}</td>
+      <td [hidden]="hidden_columnas[2].ocultar">{{ sgcmData.cod_causa }}</td>
+      <td [hidden]="hidden_columnas[2].ocultar">{{ sgcmData.causa }}</td>
+      <td [hidden]="hidden_columnas[3].ocultar">{{ sgcmData.cod_motivo }}</td>
+      <td [hidden]="hidden_columnas[3].ocultar">{{ sgcmData.motivo }}</td>
+      <td [hidden]="hidden_columnas[4].ocultar">{{ sgcmData.cod_formula }}</td>
+      <td [hidden]="hidden_columnas[4].ocultar">{{ sgcmData.formula }}</td>
     </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">

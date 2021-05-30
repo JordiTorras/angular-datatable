@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {
   singarcausamotivo,
   singarcausamotivosResponse,
@@ -82,13 +82,15 @@ export class TablaComponent implements OnInit {
       });
 
     this.columnas = [
-      { field: 'scaumot', header: 'SCauMot' },
-      { field: 'cod_garantia', header: 'Código Garantía' },
+      { field: 'scaumot', header: 'Scaumot' },
+      { field: 'cod_garantia', header: 'Cód. Garantía' },
       { field: 'garantia', header: 'Garantía' },
-      { field: 'cod_causa', header: 'Código causa' },
+      { field: 'cod_causa', header: 'Cód. causa' },
       { field: 'causa', header: 'Causa' },
-      { field: 'cod_motivo', header: 'Código Motivo' },
+      { field: 'cod_motivo', header: 'Cód. Motivo' },
       { field: 'motivo', header: 'Motivo' },
+      { field: 'cod_formula', header: 'Cód. Formula' },
+      { field: 'Formula', header: 'Formula' },
     ];
 
     //this.sleep(9000);
@@ -107,5 +109,49 @@ export class TablaComponent implements OnInit {
   clear(table: Table) {
     this.busquedaGlobal = '';
     table.clear();
+  }
+
+  hidden_scaumot: boolean = false;
+
+  hidden_columnas: { columna: string; ocultar: boolean; inactive?: boolean }[] =
+    [
+      { columna: 'Scaumot', ocultar: false },
+      { columna: 'Garantía', ocultar: false, inactive: true },
+      { columna: 'Causa', ocultar: false },
+      { columna: 'Motivo', ocultar: false },
+      { columna: 'Formula', ocultar: false },
+    ];
+
+  _selectedColumns: any[] = this.hidden_columnas;
+
+  @Input() get selectedColumns(): any[] {
+    //return this._selectedColumns;
+    return this._selectedColumns;
+  }
+
+  set selectedColumns(val: any[]) {
+    //restore original order
+    /*     this._selectedColumns = this.hidden_columnas.filter((hidden_columnas) =>
+      val.includes(hidden_columnas)
+    ); */
+    //console.log('set selectedColumns', val);
+
+    this.hidden_columnas.forEach((a, idx) => {
+      let trobat: boolean = false;
+
+      val.forEach((b, index) => {
+        if (a.columna === b.columna) {
+          trobat = true;
+        }
+      });
+
+      //   console.log(val, trobat, idx);
+
+      if (trobat) {
+        this.hidden_columnas[idx].ocultar = false;
+      } else {
+        this.hidden_columnas[idx].ocultar = true;
+      }
+    });
   }
 }
