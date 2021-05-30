@@ -18,7 +18,9 @@ export class TablaComponent implements OnInit {
   columnas: { field: string; header: string }[] = [];
   loading: boolean = true;
   busquedaGlobal: string = '';
-  busquedaGlobal2: string = '';
+
+  garantiasUnicas: string[] = [];
+  garantiasSeleccionadas: string[] = [];
 
   constructor(private sgcmService: SingarcausamotivoService) {}
 
@@ -29,13 +31,25 @@ export class TablaComponent implements OnInit {
       .subscribe((data: singarcausamotivosResponse) => {
         this.sgcmData = data.data;
 
-        /*
-            Aqui lo que hace es corregir la fecha
-      
-        this.sgcmData.forEach(
-          (sgcmData) => (sgcmData.date = new Date(sgcmData.date))
-        );
+        // transformamos los datos de entrada
+
+        this.sgcmData.forEach((item) => {
+          /*
+            Transformamos los datos de entrada
           */
+          // (item.date = new Date(item.date))  -- transformamos una fecha
+          item.garantia = item.garantia.trim();
+          item.causa = item.causa.trim();
+          item.motivo = item.motivo.trim();
+
+          /*
+            Creamos las listas de valores unicos para garantias, causas y motivos
+          */
+
+          if (!this.garantiasUnicas.includes(item.garantia)) {
+            this.garantiasUnicas.push(item.garantia);
+          }
+        });
       });
 
     this.columnas = [

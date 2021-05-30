@@ -1,23 +1,3 @@
-<div>
-  <ol>
-    <li>
-      TODO: Falla al ordenar por multiples columnas que son numericas, por
-      ejemplo ordenar primero por "Causa" y despues por "Garantia" pues lo
-      implementa como 2 cadenas y no como numeros <BR /> SOLUCIONAT: en el json
-      de origen los numeros deben ser Numeros sin ", pues aunque en type sea un
-      Number, como es javascript lo que se ejecuta lo trata como cadena al venir
-      con comillas (ej. "130").
-    </li>
-    <li>TODO: Afegir filtre per quan no te formules</li>
-    <li>TODO: Afegir filtre TODOS</li>
-    <li>
-      TODO: Arreglar el [Reinicar], la función table.clear() no inicialitza el
-      camp de filtre <br />
-      SOLUCIONAT: utilitzant el [(ngModel)] y utiitzant una variable que
-      reinicio al apretar [Reinicar]
-    </li>
-  </ol>
-</div>
 <p-table
   #dt1
   styleClass="p-datatable-sm p-datatable-striped"
@@ -31,11 +11,13 @@
   sortMode="multiple"
   [loading]="loading"
   [globalFilterFields]="['garantia', 'causa', 'motivo']"
-  [scrollable]="true"
-  scrollHeight="400px"
-  scrollWidth="300px"
 >
-  >
+  <!-- 
+    [scrollable]="true"
+    scrollHeight="400px"
+    scrollWidth="300px" 
+-->
+
   <ng-template pTemplate="caption">
     <div class="p-d-flex p-ai-center p-jc-between">
       Parametrizacion de causas y motivos
@@ -67,13 +49,15 @@
     </tr>
     <tr>
       <th pSortableColumn="scaumot">
-        scaumot <p-sortIcon field="scaumot"></p-sortIcon>
+        scaumot
+        <p-sortIcon field="scaumot"></p-sortIcon>
       </th>
       <th pSortableColumn="cod_garantia">
         Código <p-sortIcon field="cod_garantia"></p-sortIcon>
       </th>
       <th pSortableColumn="garantia">
-        Descripción <p-sortIcon field="garantia"></p-sortIcon>
+        Descripción
+        <p-sortIcon field="garantia"></p-sortIcon>
       </th>
       <th pSortableColumn="cod_causa">
         Código <p-sortIcon field="cod_causa"></p-sortIcon>
@@ -90,21 +74,94 @@
     </tr>
     <tr>
       <th>
-        <div class="p-d-flex p-jc-between p-ai-center">
-          scaumot
-          <p-columnFilter
-            type="text"
-            field="scaumot"
-            display="menu"
-          ></p-columnFilter>
-        </div>
+        <p-columnFilter
+          type="text"
+          field="scaumot"
+          matchMode="contains"
+        ></p-columnFilter>
       </th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>
+        <p-columnFilter type="numeric" field="cod_garantia"></p-columnFilter>
+      </th>
+      <th>
+        <p-columnFilter field="cod_garantia" matchMode="in" [showMenu]="false">
+          <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+            <p-multiSelect
+              [ngModel]="value"
+              [options]="garantiasUnicas"
+              placeholder="Qualsevol"
+              (onChange)="filter($event.value)"
+              optionLabel="tvalor"
+              optionValue="cvalor"
+              [maxSelectedLabels]="2"
+              [selectedItemsLabel]="'{0} items selected'"
+              [resetFilterOnHide]="true"
+            >
+            </p-multiSelect>
+          </ng-template>
+        </p-columnFilter>
+      </th>
+      <th>
+        <p-columnFilter field="cod_causa" matchMode="in" [showMenu]="false">
+          <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+            <p-multiSelect
+              [ngModel]="value"
+              [options]="causasUnicas"
+              placeholder="Qualsevol"
+              (onChange)="filter($event.value)"
+              optionLabel="cvalor"
+              optionValue="cvalor"
+              [maxSelectedLabels]="4"
+              [selectedItemsLabel]="'{0} items selected'"
+              [resetFilterOnHide]="true"
+            >
+            </p-multiSelect>
+          </ng-template>
+        </p-columnFilter>
+      </th>
+      <th>
+        <p-columnFilter field="motivo" matchMode="in" [showMenu]="false">
+          <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+            <p-multiSelect
+              [ngModel]="value"
+              [options]="motivosUnicos"
+              placeholder="Qualsevol"
+              (onChange)="filter($event.value)"
+              optionLabel="tvalor"
+              optionValue="cvalor"
+              [maxSelectedLabels]="2"
+              [selectedItemsLabel]="'{0} items selected'"
+              [resetFilterOnHide]="true"
+            >
+            </p-multiSelect>
+          </ng-template>
+        </p-columnFilter>
+      </th>
+      <th>
+        <p-columnFilter
+          type="numeric"
+          field="cod_motivo"
+          display="menu"
+        ></p-columnFilter>
+      </th>
+      <th>
+        <p-columnFilter field="motivo" matchMode="in" [showMenu]="false">
+          <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+            <p-multiSelect
+              [ngModel]="value"
+              [options]="motivosUnicos"
+              placeholder="Qualsevol"
+              (onChange)="filter($event.value)"
+              optionLabel="tvalor"
+              optionValue="valor"
+              [maxSelectedLabels]="2"
+              [selectedItemsLabel]="'{0} items selected'"
+              [resetFilterOnHide]="true"
+            >
+            </p-multiSelect>
+          </ng-template>
+        </p-columnFilter>
+      </th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-sgcmData>
@@ -129,3 +186,16 @@
     </div>
   </ng-template>
 </p-table>
+<!-- maxSelectedLabels y selectedItemsLabel no funcionan con display = chip
+ -->
+<p-multiSelect
+  [options]="garantiasUnicas"
+  [(ngModel)]="garantiasSeleccionadas"
+  optionLabel="tvalor"
+  optionValue="cvalor"
+  [maxSelectedLabels]="2"
+  [selectedItemsLabel]="'{0} items selected'"
+  placeholder="Qualsevol"
+  [resetFilterOnHide]="true"
+></p-multiSelect>
+<p>{{ garantiasSeleccionadas }}</p>

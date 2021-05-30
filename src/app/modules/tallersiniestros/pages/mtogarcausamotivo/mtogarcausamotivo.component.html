@@ -1,1 +1,37 @@
 <app-tabla></app-tabla>
+
+<div>
+  <ol>
+    <li>
+      TODO: Falla al ordenar por multiples columnas que son numericas, por
+      ejemplo ordenar primero por "Causa" y despues por "Garantia" pues lo
+      implementa como 2 cadenas y no como numeros <BR /> SOLUCIONAT: en el json
+      de origen los numeros deben ser Numeros sin ", pues aunque en type sea un
+      Number, como es javascript lo que se ejecuta lo trata como cadena al venir
+      con comillas (ej. "130").
+    </li>
+    <li>TODO: Afegir filtre per quan no te formules</li>
+    <li>TODO: Afegir filtre TODOS</li>
+    <li>
+      TODO: Arreglar el [Reinicar], la función table.clear() no inicialitza el
+      camp de filtre <br />
+      SOLUCIONAT: utilitzant el [(ngModel)] y utiitzant una variable que
+      reinicio al apretar [Reinicar]
+    </li>
+    <li>
+      TODO: maxSelectedLabels y selectedItemsLabel no funcionan con display =
+      chip
+    </li>
+    <li>
+      AVISO: Si se usa la opción [scrollable]="true", cuando se usan filtros
+      desplegables entonces estos quedan por debajo de las filas de la tabla y
+      no se ve el pop-up del filtro
+    </li>
+    <li>
+      TODO: como obtener los valores de los diferentes filtros, por ejemplo
+      saber que he filtrado por la garantia 1 y garantia 2, con [ngModel] no me
+      ha funcionado
+    </li>
+    <li>TODO: Multiseleccion con busqueda</li>
+  </ol>
+</div>
